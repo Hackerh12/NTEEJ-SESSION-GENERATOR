@@ -1,1 +1,1 @@
-my session generator
+# Watsonxd session generator
