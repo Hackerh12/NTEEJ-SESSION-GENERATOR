@@ -12,7 +12,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background: linear-gradient(to bottom, #ffffff, #ebebeb);
+      background: linear-gradient(to bottom, #ab00fe, black, #3c01df);
       font-family: Arial, sans-serif;
     }
 
@@ -24,11 +24,12 @@
 
     .box {
       width: 300px;
-      height: 320px;
+      height: ;
       padding: 20px;
       position: relative;
       text-align: center;
-      background-color: #fff;
+      border: 2px solid black;
+      background-color: white;
       border-radius: 10px;
       transform: perspective(1000px) rotateY(0deg);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
@@ -36,23 +37,24 @@
     }
 
     #text {
-      color: black;
+      color: #000;
     }
 
     .input-container input {
-      color: black;
+      color: #000;
     }
 
     .centered-text {
-      color: black;
+      color: #000;
     }
 
     .input-container {
       display: flex;
       background: white;
+      border: 1px solid black;
       border-radius: 1rem;
-      background: linear-gradient(45deg, #c5c5c5 0%, #ffffff 100%);
-      box-shadow: 20px 20px 20px #d8d8d8, -10px -10px 20px #f8f8f8;
+      background: linear-gradient(45deg, #c954ff 0%, #7827ff 100%);
+      box-shadow:  ;
       padding: 0.3rem;
       gap: 0.3rem;
       max-width: 300px;
@@ -61,27 +63,28 @@
 
     .input-container input {
       border-radius: 0.8rem 0 0 0.8rem;
-      background: #e8e8e8;
-      box-shadow: inset 13px 13px 10px #dcdcdc, inset -13px -13px 10px #f4f4f4;
+      background: white;
+      box-shadow: inset 13px 13px 10px white, inset -13px -13px 10px white;
       width: 100%;
       flex-basis: 75%;
       padding: 1rem;
-      border: none;
-      border-left: 2px solid #4998FF;
-      color: #5e5e5e;
+      border: 1px solid black;
+      border-left: 2px solid ;
+      color: black;
+      font-weight: bold;
       transition: all 0.2s ease-in-out;
     }
 
     .input-container input:focus {
-      border-left: 2px solid #4998FF;
+      border-left: 1px solid black;
       outline: none;
-      box-shadow: inset 13px 13px 10px #BFF0FA, inset -13px -13px 10px #f4f4f4;
+      box-shadow: inset 13px 13px 10px white, inset -13px -13px 10px #f4f4f4;
     }
 
     .input-container button {
       flex-basis: 15%;
       padding: 1rem;
-      background: linear-gradient(135deg, #BFF0FA 0%, #4998FF 100%);
+      background: linear-gradient(135deg, black 0%, #4400f0 100%) ;
       font-weight: 700;
       letter-spacing: 0.3rem;
       text-transform: uppercase;
@@ -93,7 +96,7 @@
     }
 
     .input-container button:hover {
-      background: linear-gradient(135deg, #BFF0FA 0%, #4998ffc4 100%);
+      background: linear-gradient(135deg, #ff3ceb 0%, #9a0dff 100%);
     }
 
     @media (max-width: 500px) {
@@ -142,12 +145,12 @@
         <div id="text">
           <i class="fa fa-user"></i>
           <p>
-            <h3 class="centered-text">WATSON-MD PAIRING CODE</h3>
+            <h3 class="centered-text">NTEEJ-MD PAIRING CODE</h3>
             <br>
-            <h6>𝙼𝚊𝚍𝚎 𝙱𝚢 𝚆𝙰𝚃𝚂𝙾𝙽𝚇𝙳.</h6>
+            <h6>𝓬𝓻𝓮𝓪𝓽𝓮𝓭 𝓫𝔂 𝓝𝓽𝓮𝓮𝓳.</h6>
             <h6>Enter Your Number with Country Code.</h6>
             <div class="input-container">
-              <input placeholder="263789622747" type="number" id="number" placeholder="Enter your Phone number with Country Code" name="">
+              <input placeholder="263714497545" type="number" id="number" placeholder="Enter your Phone Pumber with Country Code" name="">
               <button id="submit">Submit</button>
             </div>
             
@@ -184,7 +187,7 @@
     b.addEventListener("click", async (e) => {
       e.preventDefault();
       if (!c.value) {
-        a.innerHTML = '<a style="color:black;font-weight:bold">Enter your WhatsApp number with Country Code</a><br><br>';
+        a.innerHTML = '<a style="color:white;font-weight:bold">Enter your WhatsApp number with Country Code</a><br><br>';
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
         a.innerHTML = '<a style="color:red;font-weight:bold">Invalid Number</a><br><br>';
       } else {
@@ -205,12 +208,24 @@
         c.type = "text";
         c.value = "+" + bb;
         c.style = "color:black;font-size:20px";
-        a.innerHTML = '<a style="color:black;font-weight:bold">Please Wait...</a><br><br>';
+        a.innerHTML = '<a style="color:white;font-weight:bold">Please Wait...</a><br><br>';
         let { data } = await axios(`/code?number=${Wasi_Tech}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
       }
     });
   </script>
+
+<script>function makeid(num = 4) {
+  let result = "";
+  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var characters9 = characters.length;
+  for (var i = 0; i < num; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters9));
+  }
+  return result;
+}
+module.exports = {makeid};
+</script>
 </body>
 </html>
