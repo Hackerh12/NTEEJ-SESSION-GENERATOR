@@ -57,25 +57,24 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
                let GIFTED_MD_TEXT = `
-*_Session Connected By WATSON-MD_*
-*_Made With 🤍_*
+*_Session Connected By NTEEJ-MD_*
+*_Made With ❤️_*
 ______________________________________
-╔════◇
-║ *『AMAZING YOU'VE CHOSEN WATSON MD』*
-║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
+╔════✦
+║ *『NTEEJ-MD READY FOR DEPLOY』*
+║ _first step to deploy NTEEJ-MD COMPLETED💯_
 ╚════════════════════════╝
-╔═════◇
-║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
+╭═══════✦
+║  ❲••• INFO •••❳
 ║
-║❒ *Owner:* _https://wa.me/message/789622747_
-║❒ *Repo:* _https://github.com/Watson-xd/WATSON-MD-_
-║❒ *WaGroup:* _https://chat.whatsapp.com/E0a2bl9wHYlCHuL35WBR88_
-║❒ *WaChannel:* _https://whatsapp.com/channel/0029VajjzuB9sBI890YffB1b_
-║❒ *Plugins:* _https://github.com/Watson-xd
+┃➽ *𝚆𝙰𝙲𝙷𝙰𝙽𝙽𝙴𝙻:* _https://whatsapp.com/channel/0029Vae3GZF9Bb658QgSCl1I_
+┃➽ *𝙾𝚆𝙽𝙴𝚁:* _https://wa.me/message/KMABTFHVLYKMN1_
+┃➽ *𝚁𝙴𝙿𝙾:* _https://github.com/Ntee-j01/NTEEJ-MD_
+
 ╚════════════════════════╝
 _____________________________________
 	
-_Don't Forget To Give Star To My Repo_`
+> *_DONT FORGET TO STAR OUR REPO⭐_*`
  await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
  
 
